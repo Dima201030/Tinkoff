@@ -12,12 +12,13 @@ struct RegistrationView: View {
     @Environment(\.dismiss) var dissmis
     @State private var yOffset: CGFloat = -100
     @State private var isAnimation = false
-    @State private var colors: [Color] = [.gray, .black]
+    @State private var colors: [Color] = [Color("Beig"), .yellow]
     @State private var age = ""
     var body: some View {
         ZStack {
             if viewModel.isAnimation {
-                
+                AnimatedRadialGradient(colors: [Color("Beig"), .yellow], startPoint: .bottom, endPoint: .center)
+                    .edgesIgnoringSafeArea(.all)
             } else {
                 RadialGradient(gradient: Gradient(colors: colors), center: .center, startRadius: 5, endRadius: 400)
                     .scaleEffect(2)

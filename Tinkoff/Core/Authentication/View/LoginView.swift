@@ -13,13 +13,14 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
     @State private var animate = false
     @State private var isAnimation = false
-    @State private var colors: [Color] = [.yellow, .brown]
+    @State private var colors: [Color] = [Color("Beig"), .yellow]
     
     var body: some View {
         VStack {
             ZStack {
                 if isAnimation {
-                    // You can add animation-specific views or effects here
+                    AnimatedRadialGradient(colors: [Color("Beig"), .yellow], startPoint: .bottom, endPoint: .center)
+                        .edgesIgnoringSafeArea(.all)
                 } else {
                     RadialGradient(gradient: Gradient(colors: colors), center: .center, startRadius: 5, endRadius: 400)
                         .scaleEffect(2)

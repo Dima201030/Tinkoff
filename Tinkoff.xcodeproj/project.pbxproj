@@ -50,6 +50,7 @@
 		81C260072BCDC08100652330 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C260062BCDC08100652330 /* ContentView.swift */; };
 		81C260092BCDC08600652330 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C260082BCDC08600652330 /* ContentViewModel.swift */; };
 		81C2600D2BCDC17900652330 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C2600C2BCDC17900652330 /* UserService.swift */; };
+		81C2600F2BCDCC4500652330 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C2600E2BCDCC4500652330 /* Gradients.swift */; };
 		81C5D2612BCC185200157BFF /* NewProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C5D2602BCC185200157BFF /* NewProductView.swift */; };
 		81C5D2632BCC2A3400157BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C5D2622BCC2A3400157BFF /* Assets.xcassets */; };
 		81DB2B2E2BC94FA80018FED8 /* TinkoffApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB2B2D2BC94FA80018FED8 /* TinkoffApp.swift */; };
@@ -95,6 +96,7 @@
 		81C260062BCDC08100652330 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81C260082BCDC08600652330 /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		81C2600C2BCDC17900652330 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		81C2600E2BCDCC4500652330 /* Gradients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		81C5D2602BCC185200157BFF /* NewProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductView.swift; sourceTree = "<group>"; };
 		81C5D2622BCC2A3400157BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81DB2B2A2BC94FA80018FED8 /* Tinkoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinkoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +283,7 @@
 		81C260032BCDC04F00652330 /* Utilits */ = {
 			isa = PBXGroup;
 			children = (
+				81C2600E2BCDCC4500652330 /* Gradients.swift */,
 				81C260042BCDC06900652330 /* Constants.swift */,
 			);
 			path = Utilits;
@@ -545,6 +548,7 @@
 				81C25FC72BCDBD8900652330 /* LoginViewModel.swift in Sources */,
 				81C25FC02BCDBD7800652330 /* AuthService.swift in Sources */,
 				81C25FC32BCDBD8400652330 /* LoginView.swift in Sources */,
+				81C2600F2BCDCC4500652330 /* Gradients.swift in Sources */,
 				81C25FC82BCDBD8900652330 /* RegistredViewModel.swift in Sources */,
 				81C5D2612BCC185200157BFF /* NewProductView.swift in Sources */,
 				81C2600D2BCDC17900652330 /* UserService.swift in Sources */,
