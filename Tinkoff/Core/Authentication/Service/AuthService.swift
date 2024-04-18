@@ -55,14 +55,14 @@ class AuthService {
     }
     
     private func uploadUserData(email: String, fullname: String, id: String, age: Int) async throws {
-        let user = User(fullname: fullname, email: email, age: age, profileImageUrl: nil)
+        let user = User(fullname: fullname, email: email, age: age, profileImageUrl: nil, money: 0, countCards: 0, countBusiness: 0, businessStatus: false)
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
         try await Firestore.firestore().collection("users").document(id).setData(encodedUser)
     }
     
-    func changeUserData(email: String, fullname: String, id: String, age: Int) async throws {
+    func changeUserData(email: String, fullname: String, id: String, age: Int, money: Int, countCards: Int, countBusiness: Int, businessStatus: Bool) async throws {
         do {
-            let user = User(fullname: fullname, email: email, age: age, profileImageUrl: nil)
+            let user = User(fullname: fullname, email: email, age: age, profileImageUrl: nil, money: money, countCards: countCards, countBusiness: countBusiness, businessStatus: businessStatus)
             guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
             try await Firestore.firestore().collection("users").document(id).setData(encodedUser)
         } catch {

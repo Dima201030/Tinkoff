@@ -9,53 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
-    @EnvironmentObject var appData: AppData
+    @EnvironmentObject var appData: AppData // Добавляем объект AppData в окружение
+    
     var body: some View {
-        VStack {
-            Group {
-                if viewModel.userSession != nil {
-                    TabView {
-                        MainView()
-                            .tabItem {
-                                Label("Главная",
-                                      systemImage: "house")
-                            }
-                        Text("Платежи")
-                            .tabItem {
-                                Label("Платежи",
-                                      systemImage: ""
-                                )
-                            }
-                        Text("Город")
-                            .tabItem {
-                                Label("Город",
-                                      systemImage: "")
-                            }
-                        Text("Чат")
-                            .tabItem {
-                                Label("Чат",
-                                      systemImage: "")
-                            }
-                        Text("Еще")
-                            .tabItem {
-                                Label("Еще",
-                                      systemImage: "")
-                            }
-                    }
-                } else {
-                    LoginView()
-                }
-                
+        Group {
+            if viewModel.userSession != nil {
+                MainView()
+            } else {
+                LoginView()
             }
         }
-        
-        
         .edgesIgnoringSafeArea(.all)
     }
 }
 
-
-#Preview {
-    ContentView()
-        .environmentObject(AppData())
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(AppData()) // Передаем объект AppData через environmentObject
+    }
 }

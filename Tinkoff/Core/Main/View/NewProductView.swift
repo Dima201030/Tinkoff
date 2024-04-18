@@ -355,6 +355,7 @@ struct NewProductView: View {
                 
             }
             .navigationTitle("New product")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

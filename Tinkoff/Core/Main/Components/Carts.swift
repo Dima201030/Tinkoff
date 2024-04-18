@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Carts: View {
     @Environment (\.colorScheme) var colorScheme
+    @StateObject var userViewModel = UserViewModel()
     var body: some View {
         
         //        Button {
@@ -43,9 +44,11 @@ struct Carts: View {
                     
                 }
                 VStack(alignment: .leading) {
-                    Text(6742.formattedWithSeparator())
-                        .fontWeight(.bold)
-                        .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                    if let user = userViewModel.user {
+                        Text(Int(user.money).formattedWithSeparator())
+                            .fontWeight(.bold)
+                            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                    }
                     Text("Эх")
                         .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                     Image("TinkofBlack")

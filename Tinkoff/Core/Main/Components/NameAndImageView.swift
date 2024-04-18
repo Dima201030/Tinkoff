@@ -10,7 +10,7 @@ import PhotosUI
 
 struct NameTextAndImage: View {
     @Environment (\.colorScheme) var colorScheme
-    @ObservedObject var profileViewModel: ProfileViewModel
+    @ObservedObject var profileViewModel: ProfileImageViewModel
     
     var body: some View {
         HStack  {
@@ -98,5 +98,5 @@ struct NameTextAndImage: View {
 }
 
 #Preview {
-    NameTextAndImage(profileViewModel: ProfileViewModel())
+    NameTextAndImage(profileViewModel: ProfileImageViewModel())
 }

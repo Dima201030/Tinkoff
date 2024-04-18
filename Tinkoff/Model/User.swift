@@ -16,6 +16,10 @@ struct User: Codable, Identifiable, Hashable {
     let email: String
     var age: Int
     var profileImageUrl: String?
+    var money: Int
+    var countCards: Int
+    var countBusiness: Int
+    var businessStatus: Bool
     
     var id: String {
         return uid ?? NSUUID().uuidString
@@ -45,5 +49,5 @@ class AppData: ObservableObject {
 }
 
 extension User {
-    static let MOCK_USER = User(fullname: "Saha", email: "Saha@gmail.com", age: 25, profileImageUrl: "Saha")
+    static let MOCK_USER = User(fullname: "Saha", email: "Saha@gmail.com", age: 25, profileImageUrl: "IconCats", money: 5638, countCards: 2, countBusiness: 1, businessStatus: true)
 }
